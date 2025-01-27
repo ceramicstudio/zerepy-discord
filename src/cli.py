@@ -10,7 +10,7 @@ from prompt_toolkit.completion import WordCompleter
 from prompt_toolkit.styles import Style
 from prompt_toolkit.formatted_text import HTML
 from prompt_toolkit.history import FileHistory
-from src.agent import ZerePyAgent
+from src.agent import DiscordAgent
 from src.helpers import print_h_bar
 
 # Configure logging
@@ -333,7 +333,7 @@ class ZerePyCLI:
 
     def _load_agent_from_file(self, agent_name):
         try: 
-            self.agent = ZerePyAgent(agent_name)
+            self.agent = DiscordAgent(agent_name)
             logger.info(f"\n✅ Successfully loaded agent: {self.agent.name}")
         except FileNotFoundError:
             logger.error(f"Agent file not found: {agent_name}")

@@ -197,7 +197,7 @@ class DiscordConnection(BaseConnection):
             set_key(".env", "DISCORD_TOKEN", api_key)
 
             self._test_connection(api_key)
-
+            print(self._test_connection(api_key))
             print("\n✅ Discord API configuration successfully saved!")
             return True
 
