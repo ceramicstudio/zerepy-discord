@@ -113,6 +113,14 @@ poetry shell
 poetry run python main.py
 ```
 
+## Run Ollama with Deepseek-R1
+
+```bash
+docker pull ollama/ollama 
+docker run -d -p 11434:11434 --name ollama-container ollama/ollama
+docker exec -it ollama-container ollama run deepseek-r1
+```
+
 ## Configure connections & launch an agent
 
 1. Configure your desired connections:
